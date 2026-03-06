@@ -6,7 +6,7 @@ import math
 
 # --- 1. PAGE CONFIGURATION ---
 st.set_page_config(page_title="Zero Trust Model Demonstration", layout="wide")
-st.title("🛡️ Dynamic Fuzzy Logic Zero Trust Access Control Model")
+st.title("Dynamic Fuzzy Logic Zero Trust Access Control Model")
 st.markdown("Interactive demonstration of context-aware continuous authentication.")
 
 # --- 2. THE FUZZY ENGINE (Cached for performance) ---
@@ -50,7 +50,7 @@ def get_action(score):
     return "🛑 Strict Block (User Account Locked)", "error"
 
 # --- 4. STREAMLIT USER INTERFACE (SIDEBAR FORM) ---
-st.sidebar.header("⚙️ Configuration Parameters")
+st.sidebar.header("Configuration Parameters")
 
 # Wrap the inputs in a form so it doesn't auto-calculate until the button is pressed
 with st.sidebar.form(key='authentication_form'):
@@ -120,5 +120,6 @@ if alert_type == "success": st.success(action_text)
 elif alert_type == "info": st.info(action_text)
 elif alert_type == "warning": st.warning(action_text)
 else: st.error(action_text)
+
 
 st.progress(int(final_score))
