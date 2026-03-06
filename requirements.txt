@@ -1,0 +1,5 @@
+streamlit
+numpy
+scikit-fuzzy
+scipy
+networkx
